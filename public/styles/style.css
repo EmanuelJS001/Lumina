@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /* ============================================================
-   DRACOL — style.css
+   LUMINA — style.css
    ============================================================ */
 
 /* ── RESET & TOKENS ──────────────────────────────────────── */
@@ -949,25 +949,12 @@ nav {
   box-shadow: 0 12px 32px rgba(15, 23, 42, .06);
 }
 
-.parceiro-item-helix img{
-  height: 325px;
-  object-fit: contain;
-  border-radius: 15px;
-  width: 375px;
-  border: 1px solid rgba(15, 23, 42, .08);
-  box-shadow: 0 12px 32px rgba(15, 23, 42, .06);
-}
-
 .parceiro-item-genesys {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
 }
 
 .parceiro-item-orion {
   background-color: #ffffff;
-}
-
-.parceiro-item-helix {
-  background-color: #f7f7f7;
 }
 
 /* ── CONTACT ─────────────────────────────────────────────── */
