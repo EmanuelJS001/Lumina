@@ -10,9 +10,11 @@ block content
 
     ul.nav-links
       li: a(href='#sobre') Sobre
+      li: a(href='#equipe') Equipe
       li: a(href='#compromissos') Compromissos
       li: a(href='#servicos') Serviços
       li: a(href='#projetos') Projetos
+      li: a(href='#equipe') Equipe
       li: a(href='#parceiros') Parceiros
       li: a(href='#contato') Contato
 
@@ -149,28 +151,220 @@ block content
             
   //- ── EQUIPE DESENVOLVEDORA ────────────────────────────
   section#equipe
-      .serv-intro.reveal
-        p.section-label Time de especialistas
-        h2.section-title
-          | Equipe que transforma
-          br
-          | ideias em soluções
+    .serv-intro.reveal
+      p.section-label Time de especialistas
+      h2.section-title Equipe desenvolvedora
 
-      .equipe-grid.reveal
-        .equipe-card
-          img(src='/images/vicky.jpg' alt='Vicky')
-          h3.equipe-name Vicky
-          p.equipe-role Desenvolvedora Full Stack
+    .equipe-carousel-wrapper.reveal(aria-label='Carrossel da equipe')
+      button.carousel-btn#equipePrev(type='button' aria-label='Integrante anterior')
+        svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+          polyline(points='15 18 9 12 15 6')
 
-        .equipe-card
-          img(src='/images/joao.jpg' alt='João')
-          h3.equipe-name João
-          p.equipe-role Designer UX/UI
+      .equipe-track#equipeTrack
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') V
+            img(src='/images/ale.png' alt='Foto de Alexandre')
+          h3.equipe-name Alexandre Junior
+          p.equipe-role DBA
+          .equipe-socials
+            a(href='https://www.instagram.com/ale_jvs7/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Alexandre')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/Alexandre748' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Alexandre')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
 
-        .equipe-card
-          img(src='/images/maria.jpg' alt='Maria')
-          h3.equipe-name Maria
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') J
+            img(src='/images/serv.png' alt='Foto de Daniel ')
+          h3.equipe-name Daniel Vitor
+          p.equipe-role QA
+          .equipe-socials
+            a(href='https://www.instagram.com/servini.exe/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Daniel Servini')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/servini' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Daniel Servini')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') M
+            img(src='/images/ema.jpeg' alt='Foto de Emanuel')
+          h3.equipe-name Emanuel Almeida
+          p.equipe-role Desenvolvedor Front-end
+          .equipe-socials
+            a(href='https://www.instagram.com/minininho_51/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Emanuel')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/EmanuelJS001' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Emanuel')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') V
+            img(src='/images/gui.jpeg' alt='Foto de Guilherme')
+          h3.equipe-name Guilherme Enrique
+          p.equipe-role DBA
+          .equipe-socials
+            a(href='https://www.instagram.com/gpg_2616/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Guilherme')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/GUIePABLO' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Guilherme')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') J
+            img(src='/images/mello.png' alt='Foto de Gustavo Santos')
+          h3.equipe-name Gustavo Santos
+          p.equipe-role QA
+          .equipe-socials
+            a(href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de João')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/GustavoSantosMello' target='_blank' rel='noopener noreferrer' aria-label='GitHub de João')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') M
+            img(src='/images/cardo.png' alt='Foto de cardoso')
+          h3.equipe-name Gustavo Souza
+          p.equipe-role QA
+          .equipe-socials
+            a(href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Maria')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/GustavoCarbono' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Maria')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') V
+            img(src='/images/le.png' alt='Foto de Leticia')
+          h3.equipe-name Leticia de Oliveira
           p.equipe-role Gerente de Projetos
+          .equipe-socials
+            a(href='https://www.instagram.com/le.oliveira.silva/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Leticia')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/Le255' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Leticia')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') J
+            img(src='/images/matias.png' alt='Foto de Mateus')
+          h3.equipe-name Mateus Sousa
+          p.equipe-role Designer UX/UI
+          .equipe-socials
+            a(href='https://www.instagram.com/mateustuberyu/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Mateus')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/Mateusjav4' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Mateus')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') M
+            img(src='/images/peito.png' alt='Foto de Pedro Leite')
+          h3.equipe-name Pedro leitinho
+          p.equipe-role Desenvolvedor Back-end
+          .equipe-socials
+            a(href='https://github.com/PedroLeite12121' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Maria')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') V
+            img(src='/images/rafa.png' alt='Foto de Rafaella')
+          h3.equipe-name Rhafaella Oliveira
+          p.equipe-role Desenvolvedora Back-end
+          .equipe-socials
+            a(href='https://www.instagram.com/rhafa.oliver/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Rafaella')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/RhafaOli05' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Rafaella')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') J
+            img(src='/images/rodo.png' alt='Foto de Rodolfo')
+          h3.equipe-name Rodolfo Faria
+          p.equipe-role Designer
+          .equipe-socials
+            a(href='https://www.instagram.com/rzx_sb11/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Rodolfo')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/Rozx16' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Rodolfo')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') J
+            img(src='/images/vicky.png' alt='Foto de Victoria')
+          h3.equipe-name Victoria Peixoto
+          p.equipe-role Desenvolvedora Full-stack
+          .equipe-socials
+            a(href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de João')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/vickyAqui' target='_blank' rel='noopener noreferrer' aria-label='GitHub de João')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+        
+        article.equipe-card
+          .equipe-avatar
+            span.equipe-initials(aria-hidden='true') J
+            img(src='/images/vini.png' alt='Foto de Vinicius')
+          h3.equipe-name Vinicius Menezes
+          p.equipe-role Designer
+          .equipe-socials
+            a(href='https://www.instagram.com/vini_zl_1/' target='_blank' rel='noopener noreferrer' aria-label='Instagram de Vinicius')
+              svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+                rect(x='2' y='2' width='20' height='20' rx='5')
+                path(d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z')
+                line(x1='17.5' y1='6.5' x2='17.51' y2='6.5')
+            a(href='https://github.com/vickyAqui' target='_blank' rel='noopener noreferrer' aria-label='GitHub de Vinicius')
+              svg(viewBox='0 0 24 24' fill='currentColor' aria-hidden='true')
+                path(d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z')
+
+      button.carousel-btn#equipeNext(type='button' aria-label='Próximo integrante')
+        svg(viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true')
+          polyline(points='9 18 15 12 9 6')
 
   //- ── COMPROMISSOS ─────────────────────────────────────
   section#compromissos
@@ -184,7 +378,6 @@ block content
           | Cada projeto carrega nossa assinatura: seguro, rápido e com suporte humano real.
 
       .comp-grid.reveal
-
         .comp-card
           span.comp-num 01
           .comp-icon
@@ -421,6 +614,7 @@ block content
         li: a(href='#compromissos') Compromissos
         li: a(href='#servicos') Serviços
         li: a(href='#projetos') Projetos
+        li: a(href='#equipe') Equipe
         li: a(href='#parceiros') Parceiros
         li: a(href='#contato') Contato
 
@@ -493,5 +687,39 @@ block content
           }
         });
       }, { threshold: 0.1 });
+
+      // Equipe carousel
+      const track = document.getElementById('equipeTrack');
+      const prevBtn = document.getElementById('equipePrev');
+      const nextBtn = document.getElementById('equipeNext');
+
+      if (track && prevBtn && nextBtn) {
+        const getStep = () => {
+          const card = track.querySelector('.equipe-card');
+          if (!card) return 0;
+          const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+          return card.getBoundingClientRect().width + gap;
+        };
+
+        const updateCarouselButtons = () => {
+          const maxScroll = track.scrollWidth - track.clientWidth;
+          prevBtn.disabled = track.scrollLeft <= 1;
+          nextBtn.disabled = track.scrollLeft >= maxScroll - 1;
+        };
+
+        track.querySelectorAll('.equipe-avatar img').forEach(image => {
+          image.addEventListener('error', () => image.remove(), { once: true });
+          if (image.complete && image.naturalWidth === 0) image.remove();
+        });
+        track.addEventListener('scroll', updateCarouselButtons, { passive: true });
+        window.addEventListener('resize', updateCarouselButtons);
+        prevBtn.addEventListener('click', () => {
+          track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+          track.scrollBy({ left: getStep(), behavior: 'smooth' });
+        });
+        updateCarouselButtons();
+      }
 
       document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
