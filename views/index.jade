@@ -618,6 +618,36 @@ block content
       // Contact form handler
       const contactForm = document.getElementById('contactForm');
       const formStatus = document.getElementById('formStatus');
+      const telefoneInput = document.getElementById('telefoneInput');
+
+      // Função para mascarar e limitar o telefone enquanto o usuário digita
+      if (telefoneInput) {
+        telefoneInput.addEventListener('input', (e) => {
+          let valor = e.target.value.replace(/\D/g, ''); // Remove tudo que não for dígito
+
+          // Limita o tamanho máximo a 11 dígitos (com DDD + 9º dígito)
+          if (valor.length > 11) {
+            valor = valor.slice(0, 11);
+          }
+
+          // Aplica a formatação dinamicamente
+          if (valor.length > 10) {
+            // Celular com 9 dígitos: (XX) XXXXX-XXXX
+            valor = valor.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+          } else if (valor.length > 6) {
+            // Telefone fixo ou celular incompleto: (XX) XXXX-XXXX
+            valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+          } else if (valor.length > 2) {
+            // Apenas DDD e início: (XX) XXXX
+            valor = valor.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+          } else if (valor.length > 0) {
+            // Apenas DDD: (XX
+            valor = valor.replace(/^(\d*)/, '($1');
+          }
+
+          e.target.value = valor;
+        });
+      }
 
       if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -625,7 +655,7 @@ block content
 
           const nome = document.getElementById('nomeInput').value;
           const email = document.getElementById('emailInput').value;
-          const telefone = document.getElementById('telefoneInput').value;
+          const telefone = telefoneInput.value; // Usa o valor formatado
           const mensagem = document.getElementById('mensagemInput').value;
           const submitBtn = contactForm.querySelector('.form-submit');
 
